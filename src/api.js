@@ -4,7 +4,7 @@ const gameReviewsApi = axios.create({
   baseURL: "https://wild-jade-crane-tie.cyclic.app/api",
 });
 
-export const getReviews = (review_id) => {
+export const getReviews = () => {
   return gameReviewsApi.get("/reviews").then((res) => {
     return res.data;
   });
