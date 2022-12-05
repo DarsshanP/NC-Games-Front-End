@@ -8,10 +8,10 @@ function ReviewList() {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    getReviews().then((reviews) => {
-      setReviews(reviews);
+    getReviews().then((reviewList) => {
+      setReviews(reviewList);
     });
-  }, [reviews]);
+  }, []);
 
   return (
     <main>
