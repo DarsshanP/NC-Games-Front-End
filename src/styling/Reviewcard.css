@@ -1,0 +1,39 @@
+.review-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-self: center;
+  align-content: center;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+.review-detail {
+  list-style: none;
+  border-bottom: 1px solid #456;
+  overflow: hidden;
+  padding: 15px 0 18px;
+}
+.reviewimg {
+  width: 14vw;
+  height: 14vw;
+  display: block;
+  border-radius: 5px;
+  float: left;
+  margin-right: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.review-detail-content {
+  float: left;
+  display: block;
+  font-size: 1.5vw;
+  text-align: left;
+}
+
+.review-detail-content > h2 {
+  margin: 0px;
+}
