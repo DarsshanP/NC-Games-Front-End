@@ -6,22 +6,28 @@ import "../styling/Reviewcard.css";
 
 function ReviewList() {
   const [reviews, setReviews] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    getReviews().then((reviews) => {
-      setReviews(reviews);
+    getReviews().then((reviewList) => {
+      setReviews(reviewList);
+      setIsLoading(false);
     });
-  }, [reviews]);
+  }, []);
 
   return (
     <main>
-      <ul className="review-list">
-        {reviews.map((review) => {
-          return (
-            <Reviewcard key={review.review_id} review={review}></Reviewcard>
-          );
-        })}
-      </ul>
+      {isLoading ? (
+        <h1 id="loading">Loading...</h1>
+      ) : (
+        <ul className="review-list">
+          {reviews.map((review) => {
+            return (
+              <Reviewcard key={review.review_id} review={review}></Reviewcard>
+            );
+          })}
+        </ul>
+      )}
     </main>
   );
 }

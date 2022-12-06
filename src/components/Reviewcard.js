@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Reviewcard({ review }) {
   return (
@@ -9,7 +10,9 @@ function Reviewcard({ review }) {
         className="reviewimg"
       />
       <div className="review-detail-content">
-        <h2>{review.title}</h2>
+        <Link to={`/reviews/${review.review_id}`} id="review-link">
+          <h2 id="review-detail-title">{review.title}</h2>
+        </Link>
         <p>Category: {review.category}</p>
         <p>Posted {review.created_at}</p>
         <h4> by {review.owner}</h4>

@@ -1,3 +1,7 @@
+#loading {
+  text-align: center;
+}
+
 .review-list {
   display: flex;
   flex-wrap: wrap;
@@ -9,6 +13,7 @@
   outline: 0;
   padding: 0;
 }
+
 .review-detail {
   list-style: none;
   border-bottom: 1px solid #456;
@@ -16,6 +21,7 @@
   padding: 15px 0 18px;
 }
 .reviewimg {
+  object-fit: cover;
   width: 14vw;
   height: 14vw;
   display: block;
@@ -26,14 +32,52 @@
   overflow: hidden;
   position: relative;
 }
-
 .review-detail-content {
-  float: left;
-  display: block;
+  display: inline-block;
   font-size: 1.5vw;
   text-align: left;
 }
 
-.review-detail-content > h2 {
+#review-link:link {
+  text-decoration: none;
+  color: black;
+}
+
+#review-link:hover {
+  text-decoration: underline;
+}
+
+#review-link:visited {
+  color: black;
+}
+
+#review-detail-title {
   margin: 0px;
+  text-decoration: none;
+}
+
+#review-div {
+  display: flex;
+  padding: 40px;
+}
+@media only screen and (min-device-width: 1300px) {
+  #review-div {
+    padding: 40px;
+    margin-left: 22.5%;
+    width: 50%;
+  }
+}
+.review-container {
+  text-align: left;
+}
+
+.body-container {
+  border-bottom: 1px solid #456;
+}
+
+.content-reviewimg {
+  object-fit: cover;
+  width: 50%;
+  height: 100px;
+  border-radius: 10px;
 }
