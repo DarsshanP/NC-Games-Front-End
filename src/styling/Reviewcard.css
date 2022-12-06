@@ -9,16 +9,18 @@
   align-self: center;
   align-content: center;
   border: 0;
-  margin: 0;
+  border-radius: 10px;
+  margin: 5vw 10vw;
   outline: 0;
-  padding: 0;
+  padding: 2vw;
+  background-color: #fafaf9;
 }
 
 .review-detail {
   list-style: none;
-  border-bottom: 1px solid #456;
+  border-bottom: 1px solid #976f7e;
   overflow: hidden;
-  padding: 15px 0 18px;
+  margin-bottom: 1vw;
 }
 .reviewimg {
   object-fit: cover;
@@ -57,7 +59,6 @@
 }
 
 #review-div {
-  display: flex;
   padding: 40px;
 }
 @media only screen and (min-device-width: 1300px) {

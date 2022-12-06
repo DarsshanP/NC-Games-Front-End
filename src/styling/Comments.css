@@ -1,0 +1,13 @@
+.comment-list {
+  padding: 0;
+}
+
+.comment-item {
+  display: grid;
+  grid-template-columns: auto 50vw;
+  border-bottom: 1px solid #976f7e;
+}
+
+#comment-author {
+  padding-right: 10vw;
+}
