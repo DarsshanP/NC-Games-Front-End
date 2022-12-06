@@ -15,8 +15,11 @@ function Reviewcard({ review }) {
         </Link>
         <p>Category: {review.category}</p>
         <p>Posted {review.created_at}</p>
-        <h4> by {review.owner}</h4>
-        <p>{review.votes} votes</p>
+        <div id="review-footer">
+          <h4> by {review.owner}</h4>
+          <p id="vote-count">{review.votes}</p>
+          <p id="heart">❤</p>
+        </div>
       </div>
     </li>
   );

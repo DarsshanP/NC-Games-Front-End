@@ -21,3 +21,11 @@ export const getCommentsByReview = (review_id) => {
     return res.data;
   });
 };
+
+export const updateVoteCount = (review_id, inc) => {
+  return gameReviewsApi
+    .patch(`/reviews/${review_id}`, { inc_vote: inc })
+    .then((res) => {
+      return res.data;
+    });
+};
