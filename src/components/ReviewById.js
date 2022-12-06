@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getReviewById } from "../api";
-import Viewcomments from "./Viewcomments";
+import Commentlist from "./Commentlist";
 
 function ReviewById() {
   const [review, setReview] = useState({});
@@ -44,11 +44,11 @@ function ReviewById() {
             ) : (
               <h4 className="reviewcomments">{comments.length} comments</h4>
             )}
-            <Viewcomments
+            <Commentlist
               review_id={review_id}
               comments={comments}
               setComments={setComments}
-            ></Viewcomments>
+            ></Commentlist>
           </div>
         </div>
       )}

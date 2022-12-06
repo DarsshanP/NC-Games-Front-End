@@ -1,18 +1,27 @@
 import React from "react";
+import { getCommentsByReview } from "../api";
+import { useEffect } from "react";
+import "../styling/Comments.css";
+import Comment from "./Comment";
 
-function Comment({ comment }) {
-  return (
-    <div className="comment-item">
-      <div id="comment-author">
-        <p>{comment.author}</p>
-        <p>{comment.votes} votes</p>
-      </div>
-      <div>
-        <p>{comment.body}</p>
-        <p>{new Date(comment.created_at).toDateString()}</p>
-      </div>
+function Commentlist({ review_id, comments, setComments }) {
+  useEffect(() => {
+    getCommentsByReview(review_id).then((comments) => {
+      setComments(comments);
+    });
+  }, [review_id, setComments]);
+
+  return !comments.length ? (
+    <p>This post has no comments yet</p>
+  ) : (
+    <div>
+      <grid className="comment-list">
+        {comments.map((comment) => {
+          return <Comment comment={comment}></Comment>;
+        })}
+      </grid>
     </div>
   );
 }
 
-export default Comment;
+export default Commentlist;
