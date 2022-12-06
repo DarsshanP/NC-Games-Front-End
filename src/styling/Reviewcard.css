@@ -13,7 +13,7 @@
   margin: 5vw 10vw;
   outline: 0;
   padding: 2vw;
-  background-color: #fafaf9;
+  background-color: #83b6ca;
 }
 
 .review-detail {
@@ -83,7 +83,22 @@
   }
 }
 .review-container {
+  padding: 20px;
+  background-color: #83b6ca;
+  border-radius: 10px;
   text-align: left;
+}
+
+.reviewcomments {
+  margin: 5px 0px 0px 0px;
+}
+
+#comment-author > p {
+  margin: 10px;
+}
+
+#comment-body > p {
+  margin: 10px;
 }
 
 .body-container {
