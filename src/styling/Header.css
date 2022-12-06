@@ -1,3 +1,8 @@
 #banner {
-  background-color: #7ea2a7;
+  background-color: #514256;
+  margin: 0;
+  padding: 15px;
+  font-size: 8.5vw;
+  text-align: center;
+  color: #f6f4f3;
 }

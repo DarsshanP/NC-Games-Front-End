@@ -15,3 +15,9 @@ export const getReviewById = (review_id) => {
     return res.data;
   });
 };
+
+export const getCommentsByReview = (review_id) => {
+  return gameReviewsApi.get(`/reviews/${review_id}/comments`).then((res) => {
+    return res.data;
+  });
+};

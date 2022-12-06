@@ -2,9 +2,11 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getReviewById } from "../api";
+import Commentlist from "./Commentlist";
 
 function ReviewById() {
   const [review, setReview] = useState({});
+  const [comments, setComments] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const { review_id } = useParams();
@@ -37,7 +39,16 @@ function ReviewById() {
             <p className="reviewbody">{review.review_body}</p>
           </div>
           <div className="comment-container">
-            <h3 className="reviewcomments">Comments</h3>
+            {comments.length === 1 ? (
+              <h4 className="reviewcomments">1 comment</h4>
+            ) : (
+              <h4 className="reviewcomments">{comments.length} comments</h4>
+            )}
+            <Commentlist
+              review_id={review_id}
+              comments={comments}
+              setComments={setComments}
+            ></Commentlist>
           </div>
         </div>
       )}

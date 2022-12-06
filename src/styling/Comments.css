@@ -1,0 +1,13 @@
+.comment-list {
+  display: grid;
+  grid-template-columns: auto 40vw;
+  padding: 0;
+}
+
+.comment-item {
+  display: grid;
+  grid-template-columns: auto 40vw;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border-bottom: 1px solid #976f7e;
+}
