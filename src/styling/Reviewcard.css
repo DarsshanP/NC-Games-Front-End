@@ -14,13 +14,6 @@
   padding: 0;
 }
 
-@media only screen and (min-device-width: 1300px) {
-  .review-list {
-    padding: 40px;
-    margin-left: 22.5%;
-    width: 50%;
-  }
-}
 .review-detail {
   list-style: none;
   border-bottom: 1px solid #456;

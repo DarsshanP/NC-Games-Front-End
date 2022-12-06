@@ -1,5 +1,5 @@
 function Header() {
-  return <h1>Review Zone</h1>;
+  return <h1 id="banner">Review Zone</h1>;
 }
 
 export default Header;
