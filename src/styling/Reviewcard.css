@@ -1,3 +1,7 @@
+#loading {
+  text-align: center;
+}
+
 .review-list {
   display: flex;
   flex-wrap: wrap;
@@ -13,6 +17,7 @@
 @media only screen and (min-device-width: 1300px) {
   .review-list {
     padding: 40px;
+    margin-left: 22.5%;
     width: 50%;
   }
 }
