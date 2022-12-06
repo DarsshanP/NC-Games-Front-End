@@ -9,6 +9,13 @@
   outline: 0;
   padding: 0;
 }
+
+@media only screen and (min-device-width: 1300px) {
+  .review-list {
+    padding: 40px;
+    width: 50%;
+  }
+}
 .review-detail {
   list-style: none;
   border-bottom: 1px solid #456;
@@ -16,6 +23,7 @@
   padding: 15px 0 18px;
 }
 .reviewimg {
+  object-fit: cover;
   width: 14vw;
   height: 14vw;
   display: block;
