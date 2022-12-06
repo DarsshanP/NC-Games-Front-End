@@ -13,7 +13,7 @@
   margin: 5vw 10vw;
   outline: 0;
   padding: 2vw;
-  background-color: #fafaf9;
+  background-color: #83b6ca;
 }
 
 .review-detail {
@@ -58,6 +58,20 @@
   text-decoration: none;
 }
 
+#review-footer {
+  display: flex;
+  padding: 10px 0px 10px 0px;
+}
+
+#review-footer > h4 {
+  margin: 1px 15px 1px 0px;
+}
+
+#review-footer > p {
+  display: flex;
+  margin: 1px 5px 1px 0px;
+}
+
 #review-div {
   padding: 40px;
 }
@@ -69,7 +83,22 @@
   }
 }
 .review-container {
+  padding: 20px;
+  background-color: #83b6ca;
+  border-radius: 10px;
   text-align: left;
+}
+
+.reviewcomments {
+  margin: 5px 0px 0px 0px;
+}
+
+#comment-author > p {
+  margin: 10px;
+}
+
+#comment-body > p {
+  margin: 10px;
 }
 
 .body-container {
@@ -81,4 +110,68 @@
   width: 50%;
   height: 100px;
   border-radius: 10px;
+}
+
+#heart {
+  margin: 0;
+  color: red;
+  display: inline-block;
+}
+
+.like-review-container {
+  display: flex;
+}
+
+.heart-button {
+  font-size: 4vw;
+  background-color: transparent;
+  border: none;
+}
+
+.heart-button > p {
+  padding: 0;
+  margin: 0;
+  color: white;
+  cursor: pointer;
+}
+
+.heart-button-active {
+  font-size: 4vw;
+  background-color: transparent;
+  border: none;
+}
+
+.heart-button-active > p {
+  padding: 0;
+  margin: 0;
+  color: red;
+  cursor: pointer;
+}
+
+@media only screen and (min-device-width: 600px) {
+  .heart-button {
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .heart-button > p {
+    padding: 0;
+    margin: 0;
+    color: white;
+    cursor: pointer;
+  }
+
+  .heart-button-active {
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+  }
+
+  .heart-button-active > p {
+    padding: 0;
+    margin: 0;
+    color: red;
+    cursor: pointer;
+  }
 }

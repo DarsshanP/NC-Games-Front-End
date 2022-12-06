@@ -15,11 +15,11 @@ function Commentlist({ review_id, comments, setComments }) {
     <p>This post has no comments yet</p>
   ) : (
     <div>
-      <grid className="comment-list">
+      <div className="comment-list">
         {comments.map((comment) => {
-          return <Comment comment={comment}></Comment>;
+          return <Comment comment={comment} key={comment.comment_id}></Comment>;
         })}
-      </grid>
+      </div>
     </div>
   );
 }
