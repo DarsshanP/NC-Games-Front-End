@@ -1,4 +1,18 @@
 #navbar {
+  text-align: center;
   background-color: #83b6ca;
-  padding: 15px;
+  padding: 10px;
+}
+
+.nav--link {
+  padding: 10px 50px;
+  background-color: #fdfcfb;
+  text-decoration: none;
+}
+
+.nav--link--selected {
+  background-color: #1e77aa;
+  padding: 10px 50px;
+  color: #f2f3ee;
+  text-decoration: none;
 }

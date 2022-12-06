@@ -4,8 +4,22 @@ import "../styling/Nav.css";
 function Nav() {
   return (
     <div id="navbar">
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/reviews">Reviews</NavLink>
+      <NavLink
+        to="/"
+        className={({ isActive }) =>
+          isActive ? "nav--link--selected" : "nav--link"
+        }
+      >
+        Home
+      </NavLink>
+      <NavLink
+        to="/reviews"
+        className={({ isActive }) =>
+          isActive ? "nav--link--selected" : "nav--link"
+        }
+      >
+        Reviews
+      </NavLink>
     </div>
   );
 }
