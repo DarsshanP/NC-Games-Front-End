@@ -34,8 +34,8 @@ p {
 }
 .reviewimg {
   object-fit: cover;
-  width: 14vw;
-  height: 14vw;
+  width: 11.5vw;
+  height: 11.5vw;
   display: block;
   border-radius: 5px;
   float: left;

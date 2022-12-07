@@ -1,11 +1,18 @@
 import axios from "axios";
+import "./styling/Options.css";
 
 const gameReviewsApi = axios.create({
   baseURL: "https://wild-jade-crane-tie.cyclic.app/api",
 });
 
-export const getReviews = () => {
-  return gameReviewsApi.get("/reviews").then((res) => {
+export const getReviews = (category) => {
+  let queryStr = "/reviews";
+
+  if (category) {
+    queryStr += `?category=${category}`;
+  }
+
+  return gameReviewsApi.get(queryStr).then((res) => {
     return res.data;
   });
 };
