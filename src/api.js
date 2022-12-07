@@ -29,3 +29,11 @@ export const updateVoteCount = (review_id, inc) => {
       return res.data;
     });
 };
+
+export const postComment = (review_id, comment) => {
+  return gameReviewsApi
+    .post(`/reviews/${review_id}/comments`, comment)
+    .then((res) => {
+      return res.data;
+    });
+};

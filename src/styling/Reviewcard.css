@@ -3,6 +3,15 @@
   text-align: center;
 }
 
+.reviewedby > h2,
+p {
+  margin: 0px;
+}
+
+.review-date {
+  margin-bottom: 10px;
+}
+
 .review-list {
   display: flex;
   flex-wrap: wrap;
@@ -19,7 +28,7 @@
 
 .review-detail {
   list-style: none;
-  border-bottom: 1px solid #976f7e;
+  border-bottom: 1px solid #1a214f;
   overflow: hidden;
   margin-bottom: 1vw;
 }
@@ -103,7 +112,7 @@
 }
 
 .body-container {
-  border-bottom: 1px solid #976f7e;
+  border-bottom: 1px solid #1a214f;
 }
 
 .content-reviewimg {
