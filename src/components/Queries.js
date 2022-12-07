@@ -1,13 +1,19 @@
 import React from "react";
 import { useState } from "react";
+import "../styling/Queries.css";
 
-function Queries({ setCategory }) {
+function Queries({ setCategory, setSortBy }) {
   const [categoryClick, setCategoryClick] = useState(false);
+
   const categoryHandler = (e) => {
     setCategory(e.target.value);
   };
 
-  const queryButtonHandler = () => {
+  const sortByHandler = (e) => {
+    setSortBy(e.target.value);
+  };
+
+  const categoryButtonHandler = () => {
     if (!categoryClick) {
       setCategoryClick(true);
     } else {
@@ -17,9 +23,19 @@ function Queries({ setCategory }) {
 
   return (
     <div id="query-form">
-      <button onClick={queryButtonHandler} id="query-button">
-        Categories
-      </button>
+      <div className="queryButtons">
+        <button onClick={categoryButtonHandler} id="category-button">
+          Categories
+        </button>
+        <select id="sortby" name="sortby" onChange={sortByHandler}>
+          <option value="">Sort By</option>
+          <option value="owner">Owner</option>
+          <option value="title">Title</option>
+          <option value="created_at">Date</option>
+          <option value="votes">Votes</option>
+          <option value="comment_count">Comments</option>
+        </select>
+      </div>
       <div className={categoryClick ? "queries" : "queries-hidden"}>
         <form>
           <input

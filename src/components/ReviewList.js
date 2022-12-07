@@ -9,21 +9,22 @@ function ReviewList() {
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [category, setCategory] = useState("");
+  const [sortBy, setSortBy] = useState("");
 
   useEffect(() => {
-    getReviews(category).then((reviewList) => {
+    getReviews(category, sortBy).then((reviewList) => {
       setReviews(reviewList);
       setIsLoading(false);
     });
-  }, [category]);
+  }, [category, sortBy]);
 
   return (
     <main>
       {isLoading ? (
         <h1 id="loading">Loading...</h1>
       ) : (
-        <div id="category-and-list">
-          <Queries setCategory={setCategory} />
+        <div>
+          <Queries setCategory={setCategory} setSortBy={setSortBy} />
           <ul className="review-list">
             {reviews.map((review) => {
               return (
