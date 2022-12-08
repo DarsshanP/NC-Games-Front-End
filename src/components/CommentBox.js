@@ -5,7 +5,7 @@ import { UserContext } from "../contexts/User";
 function CommentBox({ review_id, newComment, setNewComment }) {
   const { user } = useContext(UserContext);
   const comment = {
-    username: user.username, //temp hardcoded username until login feature is added
+    username: user.username,
     body: newComment,
   };
   const submitHandler = (e) => {
@@ -23,7 +23,7 @@ function CommentBox({ review_id, newComment, setNewComment }) {
     <div>
       <div>
         <form type="submit">
-          <input
+          <textarea
             id="comment-bar"
             type="text"
             placeholder="add a comment"
@@ -31,7 +31,7 @@ function CommentBox({ review_id, newComment, setNewComment }) {
             onChange={(e) => {
               setNewComment(e.target.value);
             }}
-          ></input>
+          ></textarea>
           <button onClick={submitHandler}>Submit</button>
         </form>
       </div>

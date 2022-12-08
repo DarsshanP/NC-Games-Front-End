@@ -26,6 +26,11 @@
   height: 25px;
   width: 25px;
 }
+
+.trash-hidden {
+  display: none;
+}
+
 .trash:hover {
   rotate: -30deg;
 }
