@@ -5,4 +5,13 @@
   font-size: 8.5vw;
   text-align: center;
   color: #fdfcfb;
+  -webkit-text-stroke: 0.45vw black;
+}
+
+#welcome {
+  background-color: #1e77aa;
+  color: #fdfcfb;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 30px;
 }

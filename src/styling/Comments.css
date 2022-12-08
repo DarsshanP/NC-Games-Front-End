@@ -1,4 +1,6 @@
 .comment-item {
+  display: flex;
+  flex-direction: column;
   border-bottom: 1px solid #1a214f;
 }
 
@@ -12,4 +14,23 @@
 
 #comment-author > p {
   margin: 3px 0px;
+}
+#trash-button {
+  background-color: Transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.trash {
+  float: right;
+  height: 25px;
+  width: 25px;
+}
+
+.trash-hidden {
+  display: none;
+}
+
+.trash:hover {
+  rotate: -30deg;
 }
