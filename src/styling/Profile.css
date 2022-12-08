@@ -2,3 +2,63 @@
   text-align: center;
   color: #fdfcfb;
 }
+
+#log-in-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fdfcfb;
+  margin: 0px 10vw;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.usercard > h3 {
+  margin: 0;
+  font-size: 25px;
+}
+
+.usercard > img {
+  height: 40vw;
+  width: 40vw;
+}
+
+#logged-in-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #fdfcfb;
+  margin: 10vw 10vw;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+#logged-in-card > .usercard > button {
+  display: none;
+}
+
+@media only screen and (min-device-width: 1000px) {
+  #log-in-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #fdfcfb;
+    margin: 0px 40vw;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .usercard > img {
+    height: 15vw;
+    width: 15vw;
+  }
+
+  #logged-in-card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #fdfcfb;
+    margin: 5vw 40vw;
+    border-radius: 20px;
+    padding: 20px;
+  }
+}

@@ -1,12 +1,13 @@
 import React, { useContext } from "react";
 import { UserContext } from "../contexts/User";
 
-function UserCard({ user }) {
+function UserCard({ user, setIsLoggedIn }) {
   const { avatar_url, username } = user;
   const { setUser } = useContext(UserContext);
 
   const clickHandler = () => {
     setUser(user);
+    setIsLoggedIn(true);
   };
 
   return (

@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import { postComment } from "../api";
+import { UserContext } from "../contexts/User";
 
-function CommentBox({ review_id, setComments, newComment, setNewComment }) {
+function CommentBox({ review_id, newComment, setNewComment }) {
+  const { user } = useContext(UserContext);
   const comment = {
-    username: "jessjelly", //temp hardcoded username until login feature is added
+    username: user.username, //temp hardcoded username until login feature is added
     body: newComment,
   };
   const submitHandler = (e) => {
