@@ -3,6 +3,15 @@
   text-align: center;
 }
 
+.reviewedby > h2,
+p {
+  margin: 0px;
+}
+
+.review-date {
+  margin-bottom: 10px;
+}
+
 .review-list {
   display: flex;
   flex-wrap: wrap;
@@ -19,14 +28,14 @@
 
 .review-detail {
   list-style: none;
-  border-bottom: 1px solid #976f7e;
+  border-bottom: 1px solid #1a214f;
   overflow: hidden;
   margin-bottom: 1vw;
 }
 .reviewimg {
   object-fit: cover;
-  width: 14vw;
-  height: 14vw;
+  width: 11.5vw;
+  height: 11.5vw;
   display: block;
   border-radius: 5px;
   float: left;
@@ -103,7 +112,7 @@
 }
 
 .body-container {
-  border-bottom: 1px solid #976f7e;
+  border-bottom: 1px solid #1a214f;
 }
 
 .content-reviewimg {

@@ -1,0 +1,29 @@
+.queries {
+  display: flex;
+  text-align: left;
+  justify-content: flex-start;
+  padding: 10px 0px 10px 5px;
+  align-self: start;
+  width: 40vw;
+  border-radius: 0px 0px 10px 0px;
+  background-color: #fdfcfb;
+}
+
+.queries-hidden {
+  display: none;
+}
+
+.queryButtons {
+  display: flex;
+}
+
+#category-button {
+  display: flex;
+  height: 25px;
+  width: 40.65vw;
+  border: 2px solid black;
+  border-left: none;
+  font-size: 18px;
+  text-align: left;
+  padding: 0;
+}

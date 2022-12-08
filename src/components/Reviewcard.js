@@ -14,7 +14,7 @@ function Reviewcard({ review }) {
           <h2 id="review-detail-title">{review.title}</h2>
         </Link>
         <p>Category: {review.category}</p>
-        <p>Posted {review.created_at}</p>
+        <p>Posted {new Date(review.created_at).toDateString()}</p>
         <div id="review-footer">
           <h4> by {review.owner}</h4>
           <p id="vote-count">{review.votes}</p>

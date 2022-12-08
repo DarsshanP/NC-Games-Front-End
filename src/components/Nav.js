@@ -20,6 +20,14 @@ function Nav() {
       >
         Reviews
       </NavLink>
+      <NavLink
+        to="/user"
+        className={({ isActive }) =>
+          isActive ? "nav--link--selected" : "nav--link"
+        }
+      >
+        Profile
+      </NavLink>
     </div>
   );
 }
