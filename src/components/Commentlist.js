@@ -4,12 +4,12 @@ import { useEffect } from "react";
 import "../styling/Comments.css";
 import Comment from "./Comment";
 
-function Commentlist({ review_id, comments, setComments }) {
+function Commentlist({ review_id, comments, setComments, newComment }) {
   useEffect(() => {
     getCommentsByReview(review_id).then((comments) => {
       setComments(comments);
     });
-  }, [review_id, setComments]);
+  }, [review_id, newComment, setComments]);
 
   return !comments.length ? (
     <p>This post has no comments yet</p>

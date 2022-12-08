@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
 import { postComment } from "../api";
 
-function CommentBox({ review_id, setComments }) {
-  const [newComment, setNewComment] = useState("");
+function CommentBox({ review_id, setComments, newComment, setNewComment }) {
   const comment = {
     username: "jessjelly", //temp hardcoded username until login feature is added
     body: newComment,

@@ -12,6 +12,7 @@ function ReviewById() {
   const [isLoading, setIsLoading] = useState(true);
   const [isClicked, setIsClicked] = useState(false);
   const [commentClick, setCommentClick] = useState(false);
+  const [newComment, setNewComment] = useState("");
 
   const { review_id } = useParams();
 
@@ -93,12 +94,15 @@ function ReviewById() {
               <CommentBox
                 review_id={review_id}
                 setComments={setComments}
+                newComment={newComment}
+                setNewComment={setNewComment}
               ></CommentBox>
             ) : null}
             <Commentlist
               review_id={review_id}
               comments={comments}
               setComments={setComments}
+              newComment={newComment}
             ></Commentlist>
           </div>
         </div>
