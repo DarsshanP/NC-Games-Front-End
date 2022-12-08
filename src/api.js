@@ -47,3 +47,13 @@ export const postComment = (review_id, comment) => {
       return res.data;
     });
 };
+
+export const getUsers = () => {
+  return gameReviewsApi.get("/users").then((res) => res.data.users);
+};
+
+export const deleteComment = (comment_id) => {
+  return gameReviewsApi
+    .delete(`/comments/${comment_id}`)
+    .then((res) => res.data);
+};

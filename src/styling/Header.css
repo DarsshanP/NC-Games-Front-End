@@ -6,3 +6,11 @@
   text-align: center;
   color: #fdfcfb;
 }
+
+#welcome {
+  background-color: #1e77aa;
+  color: #fdfcfb;
+  margin: 0;
+  text-align: center;
+  padding-bottom: 30px;
+}
