@@ -7,6 +7,7 @@ import ReviewById from "./components/ReviewById";
 import Home from "./components/Home";
 import Profile from "./components/Profile";
 import { useState } from "react";
+import NotFound from "./components/NotFound";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -24,6 +25,7 @@ function App() {
             <Profile isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
           }
         ></Route>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );
