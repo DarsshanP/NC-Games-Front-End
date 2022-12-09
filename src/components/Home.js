@@ -7,7 +7,7 @@ function Home() {
 
   useEffect(() => {
     setIsLoading(false);
-  });
+  }, []);
   return (
     <div>
       {isLoading ? (
