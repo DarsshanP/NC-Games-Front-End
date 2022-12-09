@@ -13,6 +13,7 @@ function ReviewById() {
   const [isClicked, setIsClicked] = useState(false);
   const [commentClick, setCommentClick] = useState(false);
   const [newComment, setNewComment] = useState("");
+  const [isError, setIsError] = useState(false);
 
   const { review_id } = useParams();
 
@@ -21,10 +22,11 @@ function ReviewById() {
       .then((review) => {
         setReview(review);
         setIsLoading(false);
+        setIsError(false);
       })
       .catch((err) => {
         if (err.response.status === 404) {
-          console.log("oh no");
+          setIsError(true);
         }
       });
   }, [review_id]);
@@ -53,7 +55,7 @@ function ReviewById() {
     }
   };
 
-  if (!Object.keys(review).length) {
+  if (isError) {
     return (
       <div id="err-msg">
         <h1>Oops! This review does not exist yet</h1>
