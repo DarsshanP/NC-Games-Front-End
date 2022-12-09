@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { getReviewById } from "../api";
 import Commentlist from "./Commentlist";
 import { updateVoteCount } from "../api";
 import CommentBox from "./CommentBox";
+import { ErrorContext } from "../contexts/Error";
 
 function ReviewById() {
   const [review, setReview] = useState({});
@@ -13,9 +14,8 @@ function ReviewById() {
   const [isClicked, setIsClicked] = useState(false);
   const [commentClick, setCommentClick] = useState(false);
   const [newComment, setNewComment] = useState("");
-  const [isError, setIsError] = useState(false);
-
   const { review_id } = useParams();
+  const { isError, setIsError } = useContext(ErrorContext);
 
   useEffect(() => {
     getReviewById(review_id)
@@ -29,7 +29,7 @@ function ReviewById() {
           setIsError(true);
         }
       });
-  }, [review_id]);
+  }, [review_id, setIsError]);
 
   const likeHandler = () => {
     if (!isClicked) {
