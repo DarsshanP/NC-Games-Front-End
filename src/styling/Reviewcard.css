@@ -185,3 +185,12 @@ p {
     cursor: pointer;
   }
 }
+
+#msg-text {
+  text-align: center;
+  color: #fdfcfb;
+}
+
+#err-msg {
+  text-align: center;
+}

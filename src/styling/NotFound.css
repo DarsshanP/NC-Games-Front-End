@@ -1,0 +1,14 @@
+.link {
+  padding: 2vw 3vw;
+  font-size: 40px;
+}
+
+#info {
+  text-align: center;
+}
+
+#info > p {
+  font-size: 80px;
+  margin: 70px;
+  color: white;
+}

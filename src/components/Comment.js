@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "../contexts/User";
 import { deleteComment } from "../api";
+import { ErrorContext } from "../contexts/Error";
 
 function Comment({ comment, setDeleted }) {
   const { user } = useContext(UserContext);
   const [deleteLoad, setDeleteLoad] = useState(false);
-
+  const { isError } = useContext(ErrorContext);
   const deleteHandler = (e) => {
     setDeleteLoad(true);
     deleteComment(e.target.id).then((res) => {
@@ -13,6 +14,13 @@ function Comment({ comment, setDeleted }) {
     });
   };
 
+  if (isError) {
+    return (
+      <div>
+        <p>Oops! Something Went Wrong</p>
+      </div>
+    );
+  }
   return (
     <div className="comment-item">
       <div>
