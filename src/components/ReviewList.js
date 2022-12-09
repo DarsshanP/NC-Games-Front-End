@@ -5,7 +5,7 @@ import Reviewcard from "./Reviewcard";
 import "../styling/Reviewcard.css";
 import Queries from "./Queries";
 
-function ReviewList() {
+function ReviewList({ categoryList }) {
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [category, setCategory] = useState("");

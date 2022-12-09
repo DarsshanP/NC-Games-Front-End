@@ -11,6 +11,7 @@ import NotFound from "./components/NotFound";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <div className="App">
       <Header></Header>
@@ -26,6 +27,7 @@ function App() {
           }
         ></Route>
         <Route path="*" element={<NotFound />} />
+        <Route>404 Page</Route>
       </Routes>
     </div>
   );
