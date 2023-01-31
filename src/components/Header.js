@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import { UserContext } from "../contexts/User";
 import "../styling/Header.css";
 
 function Header() {
