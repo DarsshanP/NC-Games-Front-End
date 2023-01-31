@@ -27,7 +27,7 @@ function Home() {
         {isLoading ? (
           <h1 id="loading">Loading...</h1>
         ) : (
-          <h1>Welcome to ReviewZone!</h1>
+          <h1>Welcome to ReviewZone! Home to any board game reviews.</h1>
         )}
       </div>
     );
