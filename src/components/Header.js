@@ -7,7 +7,6 @@ function Header() {
   return (
     <div>
       <h1 id="banner">Review Zone</h1>
-      {user.username ? <h2 id="welcome">Welcome {user.username}</h2> : null}
     </div>
   );
 }

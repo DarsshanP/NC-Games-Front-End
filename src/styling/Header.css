@@ -1,11 +1,10 @@
 #banner {
-  background-color: #1e77aa;
+  background-color: #222222;
   margin: 0;
   padding: 15px;
   font-size: 8.5vw;
   text-align: center;
   color: #fdfcfb;
-  -webkit-text-stroke: 0.45vw black;
 }
 
 #welcome {

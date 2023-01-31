@@ -23,12 +23,12 @@ p {
   margin: 5vw 10vw;
   outline: 0;
   padding: 2vw;
-  background-color: #83b6ca;
+  background-color: #666666;
 }
 
 .review-detail {
   list-style: none;
-  border-bottom: 1px solid #1a214f;
+  border-bottom: 1px solid #222222;
   overflow: hidden;
   margin-bottom: 1vw;
 }
@@ -94,7 +94,7 @@ p {
 }
 .review-container {
   padding: 20px;
-  background-color: #83b6ca;
+  background-color: #666666;
   border-radius: 10px;
   text-align: left;
 }
@@ -112,7 +112,7 @@ p {
 }
 
 .body-container {
-  border-bottom: 1px solid #1a214f;
+  border-bottom: 1px solid #222222;
 }
 
 .content-reviewimg {
